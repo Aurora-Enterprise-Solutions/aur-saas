@@ -1,0 +1,16 @@
+@import "globals/colors";
+@import "globals/spaces";
+@import "globals/root";
+@import "globals/fonts";
+@import "globals/layout";
+@import "globals/reusables";
+
+@import "components/navbar";
+@import "components/module_card";
+@import "components/logo";
+@import "components/navbar_options";
+
+@import "pages/login";
+@import "pages/modules";
+@import "pages/recover_password";
+@import "pages/maintainer";

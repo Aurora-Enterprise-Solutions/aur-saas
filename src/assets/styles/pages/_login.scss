@@ -1,0 +1,14 @@
+.page-login {
+    .au-card {
+        margin-bottom: $space-l;
+
+        .body {
+            overflow: hidden;
+        }
+
+        .btn-login,
+        .btn-recover {
+            margin: 10px 0;
+        }
+    }
+}

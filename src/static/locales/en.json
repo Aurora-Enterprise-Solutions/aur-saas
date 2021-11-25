@@ -1,0 +1,36 @@
+{
+    "global": {
+        "rule": {
+            "required": "Obligatory field"
+        },
+        "navbar": {
+            "search": {
+                "placeholder": "Enter search text"
+            }
+        },
+        "rigths": "Aurora Enterprise Solutions © All rigths reserved - 2020"
+    },
+    "pages": {
+        "login": {
+            "title": "Authentication",
+            "field": {
+                "email": {
+                    "label": "Username",
+                    "placeholder": "email"
+                },
+                "password": {
+                    "label": "Password",
+                    "placeholder": "••••••••"
+                },
+                "cdn": {
+                    "label": "CDN",
+                    "placeholder": "com.company.aur"
+                }
+            },
+            "button": {
+                "login": "Login",
+                "recover": "Recover password"
+            }
+        }
+    }
+}

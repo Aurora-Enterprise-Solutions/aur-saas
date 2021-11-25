@@ -1,0 +1,52 @@
+.component-navbar-options {
+    @extend %float-box;
+    min-width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 100;
+
+    .option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        a {
+            margin: 0 5px;
+            user-select: none;
+        }
+
+        .au-icon {
+            margin: 2px;
+            width: 18px;
+        }
+
+        &:hover {
+            color: $color-caribbean-green;
+
+            a {
+                margin: 0 5px;
+                color: inherit;
+            }
+
+            .au-icon {
+                fill: $color-caribbean-green;
+                stroke: $color-caribbean-green;
+            }
+        }
+
+        &:not(:hover) {
+            color: $color-title;
+
+            a {
+                margin: 0 5px;
+                color: inherit;
+            }
+
+            .au-icon {
+                fill: $color-title;
+                stroke: $color-title;
+            }
+        }
+    }
+}

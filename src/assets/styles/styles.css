@@ -1,0 +1,466 @@
+/*
+ * COLORS
+ */
+:root {
+  --color-white: #FFFFFF;
+  --color-title: #191919;
+  --color-paragraph: #515151;
+  --color-placeholder: #888888;
+  --color-border: #e4e4e4;
+  --color-border-contrast: #eeeeee;
+  --color-disabled: #D3D9E1;
+  --color-default-message: #95afb9;
+  --color-background: #f5f8fe;
+  --color-caribbean-green: #07D79C;
+  --color-caribbean-green-hover: #02C38D;
+  --color-hight-contrast: #20324A;
+  --color-hight-contrast-hover: #141F72;
+  --color-portage: #8B91DD;
+  --color-radical-red: #F6576E;
+  --color-warning: #ffc400;
+  --color-confirm: #88009a;
+  --color-egyptian-blue: #0F36A5;
+  --color-default-normal-icon: #515151;
+  --color-default-hover-icon: #07D79C;
+  --color-midnight-blue: #141F72;
+  --color-simply-red: #ff798d;
+  --color-atomic-tangerine: #FF9041;
+}
+
+html {
+  height: 100%;
+  background-color: var(--color-background);
+}
+html body {
+  margin: 0;
+}
+html body,
+html body #__nuxt,
+html body #__layout {
+  height: 100%;
+}
+
+/*
+ * Font Mixin
+ */
+/*
+ * Font-family
+ */
+/*
+ * Font-size
+ */
+/*
+ * Font-weight
+ */
+/*
+ * Font-face
+ */
+@font-face {
+  font-family: "Eina";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Eina/Eina01-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Inter/Inter-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Inter/Inter-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Inter/Inter-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Inter/Inter-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Inter/Inter-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Inter/Inter-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Inter/Inter-Black.woff") format("woff");
+}
+/*
+ * Font styles
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-title);
+}
+
+label, span, p, a {
+  color: var(--color-paragraph);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+a {
+  color: var(--color-portage);
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--color-hight-contrast);
+}
+a:active {
+  color: var(--color-portage);
+}
+a[no-margin] {
+  margin: 0 !important;
+}
+
+p, a {
+  margin: 0 0 0.3rem 0;
+}
+
+.layout {
+  height: 100%;
+  overflow: auto;
+}
+.layout .page {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.layout-blank {
+  background-color: var(--color-background);
+}
+
+.layout-login {
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.layout-login .au-logo,
+.layout-login .form,
+.layout-login .rigths {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.layout-login .au-logo {
+  min-width: 200px;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px 20px 30px 20px;
+}
+.layout-login .form {
+  flex-grow: 1;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+.layout-login .rigths {
+  padding: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+.layout-login .page {
+  min-width: 300px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.layout-default {
+  display: flex;
+  flex-direction: column;
+}
+.layout-default .layout-content {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.component-navbar-options, .component-navbar,
+.float-box {
+  background-color: var(--color-white);
+  border-radius: 4px;
+  box-shadow: var(--color-border) 0px 1px 10px 1px;
+  margin: 5px 20px;
+  padding: 5px 10px;
+}
+
+.page-maintainer,
+.view-container {
+  margin-top: 10px;
+  border-top: solid 2px var(--color-portage);
+  background-color: var(--color-white);
+  padding: 10px 20px;
+}
+
+.component-navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+.component-navbar .org-logo-side {
+  height: 40px;
+  margin: 2px 10px;
+}
+.component-navbar .org-logo-side img {
+  height: 100%;
+  object-fit: scale-down;
+  border-radius: 12%;
+}
+.component-navbar .title-side {
+  margin: 2px 10px;
+  display: flex;
+  align-items: center;
+}
+.component-navbar .title-side .title {
+  margin: 0;
+}
+.component-navbar .extra-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.component-navbar .extra-container .extra-side {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2px 10px;
+}
+.component-navbar .extra-container .extra-side .search-input {
+  flex-grow: 1;
+  min-width: 150px;
+  width: 100%;
+}
+.component-navbar .extra-container .extra-side .search-input input::-webkit-search-cancel-button {
+  display: none;
+}
+.component-navbar .extra-container .user-side {
+  display: flex;
+  align-items: center;
+  margin: 2px 10px;
+}
+.component-navbar .extra-container .user-side .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.component-navbar .extra-container .user-side .user-info .name {
+  font-weight: 500;
+}
+.component-navbar .extra-container .user-side .user-pic {
+  height: 40px;
+  margin-left: 10px;
+}
+.component-navbar .extra-container .user-side .user-pic img {
+  height: 100%;
+  border-radius: 50%;
+}
+.component-navbar .extra-container .notification-side {
+  display: flex;
+  align-items: flex-end;
+}
+.component-navbar .extra-container .notification-side .au-badge {
+  margin: 0 2px;
+}
+.component-navbar .extra-container .notification-side .au-icon {
+  margin: 2px;
+  width: 18px;
+}
+.component-navbar .extra-container .notification-side .au-icon:not(:hover),
+.component-navbar .extra-container .notification-side .au-icon[showing-options] {
+  fill: var(--color-portage);
+  stroke: var(--color-portage);
+}
+.component-navbar .extra-container .notification-side .au-icon[au-clickable]:hover,
+.component-navbar .extra-container .notification-side .au-icon[showing-options] {
+  fill: var(--color-hight-contrast);
+  stroke: var(--color-hight-contrast);
+}
+.component-navbar .cascade-options {
+  width: 100%;
+  position: relative;
+}
+.component-navbar .cascade-options .component-navbar-options {
+  position: absolute;
+  right: -30px;
+  top: 8px;
+}
+
+.component-module-card {
+  width: 300px;
+  max-width: 300px;
+  margin: 10px;
+}
+.component-module-card .card-title {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.component-module-card .card-title h5, .component-module-card .card-title p {
+  color: inherit;
+  user-select: none;
+}
+.component-module-card .card-title:hover {
+  color: var(--color-caribbean-green);
+}
+.component-module-card .link-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.component-logo img {
+  width: 100%;
+}
+
+.component-navbar-options {
+  min-width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 100;
+}
+.component-navbar-options .option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.component-navbar-options .option a {
+  margin: 0 5px;
+  user-select: none;
+}
+.component-navbar-options .option .au-icon {
+  margin: 2px;
+  width: 18px;
+}
+.component-navbar-options .option:hover {
+  color: var(--color-caribbean-green);
+}
+.component-navbar-options .option:hover a {
+  margin: 0 5px;
+  color: inherit;
+}
+.component-navbar-options .option:hover .au-icon {
+  fill: var(--color-caribbean-green);
+  stroke: var(--color-caribbean-green);
+}
+.component-navbar-options .option:not(:hover) {
+  color: var(--color-title);
+}
+.component-navbar-options .option:not(:hover) a {
+  margin: 0 5px;
+  color: inherit;
+}
+.component-navbar-options .option:not(:hover) .au-icon {
+  fill: var(--color-title);
+  stroke: var(--color-title);
+}
+
+.page-login .au-card {
+  margin-bottom: 24px;
+}
+.page-login .au-card .body {
+  overflow: hidden;
+}
+.page-login .au-card .btn-login,
+.page-login .au-card .btn-recover {
+  margin: 10px 0;
+}
+
+.page-modules {
+  display: flex;
+  flex-direction: column;
+}
+.page-modules .module-list {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 30px;
+}
+.page-modules .module-list .masonry-container {
+  width: 100%;
+  height: 100%;
+}
+.page-modules .version {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.page-modules .version .version-wrapper {
+  background-color: var(--color-hight-contrast);
+  padding: 5px 10px;
+  margin: 10px 20px;
+  border-radius: 5px;
+  box-shadow: var(--color-border) 0px 0px 10px 3px;
+}
+.page-modules .version .version-wrapper label {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.page-modules .version .version-wrapper label:hover {
+  color: var(--color-caribbean-green);
+}
+
+.page-recover-password .au-card,
+.page-recover-password-confirm .au-card {
+  margin-bottom: 24px;
+}
+.page-recover-password .au-card .body,
+.page-recover-password-confirm .au-card .body {
+  overflow: hidden;
+}
+.page-recover-password .au-card .body .info,
+.page-recover-password-confirm .au-card .body .info {
+  text-align: justify;
+  margin-bottom: 16px;
+}
+.page-recover-password .au-card .body .password-help ul,
+.page-recover-password-confirm .au-card .body .password-help ul {
+  margin-block-start: 5px;
+  padding-left: 30px;
+}
+.page-recover-password .au-card .body .password-help ul li,
+.page-recover-password-confirm .au-card .body .password-help ul li {
+  transition: color 0.3s;
+}
+.page-recover-password .au-card .body .password-help ul li.has-error,
+.page-recover-password-confirm .au-card .body .password-help ul li.has-error {
+  color: var(--color-radical-red);
+}
+.page-recover-password .au-card .body .password-help ul li.success,
+.page-recover-password-confirm .au-card .body .password-help ul li.success {
+  color: var(--color-caribbean-green);
+}
+.page-recover-password .au-card .btn-send,
+.page-recover-password-confirm .au-card .btn-send {
+  margin: 10px 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

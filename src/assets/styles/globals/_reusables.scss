@@ -1,0 +1,16 @@
+%float-box,
+.float-box {
+    background-color: $color-white;
+    border-radius: 4px;
+    box-shadow: $color-border 0px 1px 10px 1px;
+    margin: 5px 20px;
+    padding: 5px 10px;
+}
+
+%view-container,
+.view-container {
+    margin-top: 10px;
+    border-top: solid 2px $color-portage;
+    background-color: $color-white;
+    padding: 10px 20px;
+}
